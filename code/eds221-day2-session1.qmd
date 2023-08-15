@@ -6,9 +6,9 @@ execute:
   warning: false 
 ---
 
-## Making & indexing data in R 
+## Making & indexing data in R
 
-### Vectors 
+### Vectors
 
 Making Vectors
 
@@ -81,7 +81,7 @@ dog_food[2]
 dog_food["khora"]
 ```
 
-## Access Ranges of values in a vector 
+## Access Ranges of values in a vector
 
 Use: to refer to a range(low : high)
 
@@ -113,7 +113,7 @@ trees[i]
 trees[3] <- "OAK"
 ```
 
-## Matrix indexing 
+## Matrix indexing
 
 ```{r}
 fish_size <- matrix(c(0.4, 0.9, 05, 06), ncol = 2, nrow = 2, byrow = FALSE)
@@ -127,3 +127,5 @@ fish_size[2,2]
 
 fish_size[, 2]
 ```
+
+an edit!

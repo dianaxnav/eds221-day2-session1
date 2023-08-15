@@ -14,6 +14,7 @@ Making Vectors
 
 ```{r}
 library(tidyverse)
+library(here)
 ```
 
 ```{r}
@@ -187,4 +188,3 @@ starwars$starships[[1]][2]
 
 purrr::pluck(starwars, "starships", 1, 2)
 ```
-An edit

@@ -187,3 +187,4 @@ starwars$starships[[1]][2]
 
 purrr::pluck(starwars, "starships", 1, 2)
 ```
+An edit

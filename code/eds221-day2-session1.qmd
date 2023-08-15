@@ -2,6 +2,113 @@
 title: "eds221-day2-session1"
 format: html
 editor: visual
+execute: 
+  warning: false 
 ---
 
-## 
+## Making & indexing data in R 
+
+### Vectors 
+
+Making Vectors
+
+```{r}
+#Using cocatenate function to combine characters
+dogs <- c("teddy", "khora", "waffle", "banjo", "tallie")
+
+#Check the class of dogs 
+typeof(dogs)
+class(dogs)
+
+```
+
+```{r}
+#Vector can only have one type in it so it will store as character 
+myBreakfast <- c("waffles", 2, TRUE, "coffee")
+typeof(myBreakfast)
+```
+
+```{r}
+weights <- c(50, 60, 25, 35, 55)
+
+#The values are stored as doubles
+class(weights)
+typeof(weights)
+```
+
+```{r}
+weights_integer <- c(50L, 60L, 25L, 35L, 55L)
+
+#Still numeric but integer is a subset of it 
+typeof(weights_integer)
+class(weights_integer)
+```
+
+```{r}
+#Is. functions are questions 
+is.numeric(weights_integer)
+```
+
+```{r}
+zipcode <- c(93105, 93514, 93101, 93401)
+class(zipcode)
+
+#Use as. family functions to recast data classes
+#Use is. family functions to ASK what class something is
+zipcodes_chr <- as.character(zipcode)
+
+```
+
+## Create a vector with named elements
+
+```{r}
+#These names are strings, qoutes are saying character
+dog_food <- c(teddy = "purina", khora = "alpo", waffle = "fancy feast",  banjo = "blue diamonds", tallie = "farmers dog")
+
+class(dog_food)
+
+#It will only find the class of variable it equals to 
+test <- c(cat = 4, dog = 10, mouse = 14)
+class(test)
+```
+
+```{r}
+#If we want to access the second element in dog_food 
+dog_food[2]
+#r uses a one index meaning that first element of vector is given the position value of 1, so to call alpo we use 2. (python and java use 0 indexing)
+
+#You can also call the name of the second element
+dog_food["khora"]
+```
+
+## Access Ranges of values in a vector 
+
+Use: to refer to a range(low : high)
+
+```{r}
+trees <- c("ponderosa", "lodgepole", "jeffrey", "sugar", "white pine", "bristlecone")
+
+trees[3]
+
+#What if we want a range?
+trees[3 : 5]
+```
+
+## Warm- up for 'for loops'
+
+```{r}
+i <- 3
+trees[i]
+```
+
+```{r}
+#single varaible redefined so I changes w newer code
+i <- seq(1:3) #same thing as seq(from = 1, to = 3)
+
+trees[i]
+```
+
+```{r}
+#Reassigning values based on reposition
+trees[3] <- "OAK"
+```

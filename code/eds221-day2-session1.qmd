@@ -129,3 +129,34 @@ fish_size[, 2]
 ```
 
 an edit!
+
+## Lists
+
+```{r}
+urchins <- list(color = "blue", values = c(1, 2, 3), meal = c("lunch", "dinner", "dessert"), cost = 5L)
+```
+
+```{r}
+urchins_list <- urchins[2]
+
+urchins_vector <- urchins[[2]]
+
+class(urchins_list)
+class(urchins_vector)
+
+```
+
+```{r}
+urchins$values
+
+```
+
+```{r}
+sample1 <- c(1, 2, 2, 3, 4, 5, 6, 6)
+sample2 <- c(3, 4, 5, 6, 6, 7, 8, 8, 7, 7)
+
+#What is p-value? 
+ttest_example <- t.test(sample1, sample2)
+```
+
+The mean size for treees in Site A is greater than themean size in Site B (.., my statistical summary, `r ttest_example$p.value`) .

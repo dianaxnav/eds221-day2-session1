@@ -13,6 +13,10 @@ execute:
 Making Vectors
 
 ```{r}
+library(tidyverse)
+```
+
+```{r}
 #Using cocatenate function to combine characters
 dogs <- c("teddy", "khora", "waffle", "banjo", "tallie")
 
@@ -160,3 +164,26 @@ ttest_example <- t.test(sample1, sample2)
 ```
 
 The mean size for treees in Site A is greater than themean size in Site B (.., my statistical summary, `r ttest_example$p.value`) .
+
+## Data Frames
+
+```{r}
+fruit <- data.frame(type = c("apple", "banana", "peach"), 
+                    mass = c(130, 195, 150))
+
+class(fruit)
+
+fruit
+
+fruit[3, 2]
+
+#pluck chooses: (data, row, number in vector)
+purrr::pluck(fruit, "type", 2)
+fruit$type[2]
+
+#Double brackets give you actual values
+#These are both asking for the same thing
+starwars$starships[[1]][2]
+
+purrr::pluck(starwars, "starships", 1, 2)
+```
